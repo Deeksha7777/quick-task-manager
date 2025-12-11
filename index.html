@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quick Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Quick Task Manager</h1>
+
+    <div class="input-row">
+      <input id="taskInput" type="text" placeholder="Add a new task..." />
+      <!-- button type=button so it does NOT submit the page -->
+      <button id="addBtn" type="button">Add</button>
+    </div>
+
+    <div class="filters">
+      <button data-filter="all" class="filter active">All</button>
+      <button data-filter="active" class="filter">Active</button>
+      <button data-filter="completed" class="filter">Completed</button>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <div class="footer">
+      <span id="count">0 tasks</span>
+      <button id="clearCompleted" type="button">Clear Completed</button>
+    </div>
+  </div>
+
+  <!-- script at end so DOM exists, or you could use defer -->
+  <script src="script.js"></script>
+</body>
+</html>
+
